@@ -46,6 +46,11 @@ namespace csharp
                     Items[i].Quality = Items[i].Quality - 1;
                 }
 
+                void DecreaseItemsSellInByOne()
+                {
+                    Items[i].SellIn = Items[i].SellIn - 1;
+                }
+
 
                 if (ItemsNameNotAgedBrite &&
                     ItemsQualityGreaterThanZero &&
@@ -75,7 +80,7 @@ namespace csharp
 
                 if (ItemsNameNotSulfurasHandOfRanagros)
                 {
-                    Items[i].SellIn = Items[i].SellIn - 1;
+                    DecreaseItemsSellInByOne();
                 }
 
 
