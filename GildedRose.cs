@@ -30,6 +30,21 @@ namespace csharp
                 bool ItemsSellInSmallerThanSix = Items[i].SellIn < 6;
 
 
+                void IfItemQualitySmallerThanFiftyThenIncreaseItemQualityByOne()
+                {
+                    if(ItemQualitySmallerThanFifty)
+                        Items[i].Quality = Items[i].Quality + 1;
+                }
+
+                void IncreaseItemQualityByOne()
+                {
+                    Items[i].Quality = Items[i].Quality + 1;
+                }
+
+                void DecreaseItemQualityByOne()
+                {
+                    Items[i].Quality = Items[i].Quality - 1;
+                }
 
 
                 if (ItemsNameNotAgedBrite &&
@@ -38,33 +53,31 @@ namespace csharp
                     && Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
                 {
 
-                    Items[i].Quality = Items[i].Quality - 1;
+                    DecreaseItemQualityByOne();
 
                 }
                 else
                 {
-                    if (ItemQualitySmallerThanFifty)
-                    {
-                        Items[i].Quality = Items[i].Quality + 1;
+                    IfItemQualitySmallerThanFiftyThenIncreaseItemQualityByOne();
 
                         if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
                         {
                             if (ItemQualitySmallerThanFifty && ItemsSellInSmallerThanEleven)
                             {
 
-                                Items[i].Quality = Items[i].Quality + 1;
+                            IncreaseItemQualityByOne();
 
-                            }
+                        }
 
                             if (ItemQualitySmallerThanFifty && ItemsSellInSmallerThanSix)
                             {
 
-                                Items[i].Quality = Items[i].Quality + 1;
+                            IncreaseItemQualityByOne();
 
                             }
                         }
                     }
-                }
+                
 
                 if (ItemsNameNotSulfurasHandOfRanagros)
                 {
@@ -83,10 +96,7 @@ namespace csharp
                     }
                     else
                     {
-                        if (ItemQualitySmallerThanFifty)
-                        {
-                            Items[i].Quality = Items[i].Quality + 1;
-                        }
+                        IfItemQualitySmallerThanFiftyThenIncreaseItemQualityByOne();
                     }
 
 
@@ -100,10 +110,7 @@ namespace csharp
                     }
                     else
                     {
-                        if (ItemQualitySmallerThanFifty)
-                        {
-                            Items[i].Quality = Items[i].Quality + 1;
-                        }
+                        IfItemQualitySmallerThanFiftyThenIncreaseItemQualityByOne();
                     }
                 }
             }
