@@ -60,22 +60,16 @@ namespace csharp
                 {
                     IfItemQualitySmallerThanFiftyThenIncreaseItemQualityByOne();
 
-                        if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
+                    if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
+                    {
+                        if (ItemQualitySmallerThanFifty && ItemsSellInSmallerThanEleven || ItemsSellInSmallerThanSix)
                         {
-                            if (ItemQualitySmallerThanFifty && ItemsSellInSmallerThanEleven)
-                            {
 
                             IncreaseItemQualityByOne();
 
                         }
+                    }
 
-                            if (ItemQualitySmallerThanFifty && ItemsSellInSmallerThanSix)
-                            {
-
-                            IncreaseItemQualityByOne();
-
-                            }
-                        }
                     }
                 
 
